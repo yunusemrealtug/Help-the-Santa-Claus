@@ -74,37 +74,6 @@ public class project4main {
         return 0;
     }
 
-//	public static int make() {
-//		boolean broken=false;
-//		while (broken==false) {
-//			broken=true;
-//			for (int i=0; i<s.getEdges().size(); i++) {
-//				Edge a1=s.getEdges().get(i);
-//				if (a1.getCapacity()>0) {
-//					for (int j=0; j<a1.getTargetVertex().getEdges().size(); j++) {
-//						a1.getTargetVertex().setVisited(true);
-//						Edge a2=a1.getTargetVertex().getEdges().get(j);
-//						if (a2.getCapacity()>0) {
-//							for (int k=0; k<a2.getTargetVertex().getEdges().size(); k++) {
-//								a2.getTargetVertex().setVisited(true);
-//								Edge a3=a2.getTargetVertex().getEdges().get(k);
-//								if (a3.getCapacity()>0 && a3.getTargetVertex().getType().equals("t")) {
-//									int bottleNeck=Math.min(a1.getCapacity(), a2.getCapacity());
-//									bottleNeck=Math.min(bottleNeck, a3.getCapacity());
-//									a1.setCapacity(a1.getCapacity()-bottleNeck);
-//									a2.getOpposentPath().setCapacity(a2.getOpposentPath().getCapacity()+bottleNeck);
-//									a2.setCapacity(a2.getCapacity()-bottleNeck);
-//									a3.setCapacity(a3.getCapacity()-bottleNeck);
-//									atTheHand+=bottleNeck;
-//								}
-//							}
-//						}
-//					}
-//				}
-//			}
-//		}
-//		return atTheHand;
-//	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		Locale.setDefault(new Locale("en", "US"));
@@ -584,42 +553,7 @@ public class project4main {
 				}
 			}	
 		}
-//		System.out.println(vertexes.size());
-//		System.out.println(levels.size());
-//		vertexes.add(t);
-//		levels.add(3);
-//		LinkedList<Vertex>queue=new LinkedList<Vertex>();
-//		LinkedList<Edge>edgeQueue=new LinkedList<Edge>();
-//		int bottleNeck=Integer.MAX_VALUE;
-//		queue.add(s);
-//		boolean x=true;
-//		while (x) {
-//			for (int i=0; i<queue.getLast().getEdges().size(); i++) {
-//				if (levels.get(vertexes.indexOf(queue.getLast().getEdges().get(i).getTargetVertex()))==
-//						levels.get(vertexes.indexOf(queue.getLast()))+1 && queue.getLast().getEdges().get(i).getCapacity()>0 && 
-//						(levels.get(vertexes.indexOf(queue.getLast().getEdges().get(i).getTargetVertex()))<levels.get(vertexes.indexOf(t)) || 
-//								queue.getLast().getEdges().get(i).getTargetVertex().equals(t))) {
-//					bottleNeck=Math.min(queue.getLast().getEdges().get(i).getCapacity(), bottleNeck);
-//					edgeQueue.add(queue.getLast().getEdges().get(i));
-//					queue.add(queue.getLast().getEdges().get(i).getTargetVertex());
-//					break;
-//				}
-//
-//			}
-//			if (queue.getLast().equals(t)) {
-//				for (int j=0; j<edgeQueue.size(); j++) {
-//					edgeQueue.get(j).setCapacity(edgeQueue.get(j).getCapacity()-bottleNeck);
-//					if (edgeQueue.get(j).getOpposentPath()!=null) {
-//						edgeQueue.get(j).getOpposentPath().setCapacity(edgeQueue.get(j).getOpposentPath().getCapacity()+bottleNeck);
-//					}
-//				}
-//				atTheHand+=bottleNeck;
-//				queue.clear();
-//				queue.add(s);
-//				bottleNeck=Integer.MAX_VALUE;
-//				System.out.println(totalGifts-atTheHand);
-//			}
-//		}
+
 		
 		visitedNumber=1;
 		int flow=Integer.MAX_VALUE;
